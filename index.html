@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesan untuk Adel</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #ffe6f2;
+            position: relative;
+        }
+        .intro-container, .main-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            position: relative;
+            z-index: 1;
+        }
+        .intro-content, .main-content {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(255, 105, 180, 0.3);
+            max-width: 80%;
+        }
+        h1 {
+            color: #ff69b4;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        p {
+            color: #333;
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+        .continue-btn {
+            background-color: #ff69b4;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.1em;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            display: none;
+        }
+        .continue-btn:hover {
+            background-color: #ff1493;
+        }
+        .main-container {
+            display: none;
+        }
+        .section {
+            background-color: #fff0f5;
+            border: 1px solid #ffb6c1;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        .section h3 {
+            color: #c71585;
+            margin-top: 0;
+        }
+        .hearts {
+            text-align: center;
+            font-size: 24px;
+            color: #ff69b4;
+            margin: 20px 0;
+        }
+        .watermark {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-45deg);
+            font-size: 8vw;
+            color: rgba(255, 105, 180, 0.1);
+            white-space: nowrap;
+            pointer-events: none;
+            z-index: 0;
+        }
+        .sparkle {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #ff69b4;
+            border-radius: 50%;
+            opacity: 0;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="watermark">DEWA FOR YOU</div>
+    <div class="intro-container" id="intro">
+        <div class="intro-content">
+            <h1>Halo, Adel! 👋</h1>
+            <p id="typed-text"></p>
+            <button id="continue-btn" class="continue-btn">Lanjutkan</button>
+        </div>
+    </div>
+
+    <div class="main-container" id="main">
+        <div class="main-content">
+            <h1>🌸 Asisten Pintar untuk Mahasiswa Bahasa Indonesia 🌸</h1>
+            
+            <div class="hearts">❤️💖❤️</div>
+            
+            <h2>Solusi Cerdas untuk Tugas-tugasmu</h2>
+            
+            <div class="section">
+                <h3>Hai, Aku Ingin Membantumu!</h3>
+                <p>Halo! Aku tahu kuliah Bahasa Indonesia itu penuh tantangan dan kadang membuatmu lelah. Sebagai teman yang bekerja di bidang IT, aku ingin membantumu menyelesaikan tugas-tugas kuliahmu dengan lebih mudah dan efisien. Aku bisa membuatkan software khusus untukmu yang akan mengotomatisasi beberapa pekerjaan yang biasanya kamu lakukan secara manual.</p>
+            </div>
+            
+            <div class="section">
+                <h3>Apa yang Bisa Kulakukan Untukmu?</h3>
+                <p>Meskipun aku tidak tahu persis semua jenis tugas yang kamu hadapi, aku bisa membuat beberapa software yang mungkin berguna untukmu, seperti:</p>
+                <ul>
+                    <li>Penganalisis teks otomatis untuk membantu mengidentifikasi struktur kalimat, gaya bahasa, atau unsur-unsur sastra dalam sebuah karya.</li>
+                    <li>Generator ringkasan otomatis untuk membantu meringkas artikel atau buku yang panjang.</li>
+                    <li>Alat pengecekan plagiarisme untuk memastikan keaslian tulisanmu.</li>
+                    <li>Pembuat kutipan dan daftar pustaka otomatis sesuai dengan gaya yang dibutuhkan (APA, MLA, dll).</li>
+                    <li>Pengubah format teks, misalnya dari aksara Latin ke aksara Jawa atau Sunda, dan sebaliknya.</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h3>Bagaimana Cara Kerjanya?</h3>
+                <p>Software-software ini akan kubuat khusus untukmu menggunakan bahasa pemrograman Python. Nanti, aku akan mengubahnya menjadi file .exe yang bisa langsung kamu jalankan di laptopmu tanpa perlu menginstal apa-apa. Kamu tinggal klik dua kali, masukkan data yang diperlukan, dan software akan bekerja untukmu!</p>
+            </div>
+            
+            <div class="section">
+                <h3>Mengapa Ini Akan Membantumu?</h3>
+                <p>Dengan software-software ini, kamu bisa:</p>
+                <ul>
+                    <li>Menghemat waktu dalam mengerjakan tugas-tugas yang repetitif.</li>
+                    <li>Mengurangi kesalahan yang mungkin terjadi saat bekerja manual.</li>
+                    <li>Fokus pada aspek-aspek penting dari tugasmu, seperti analisis dan interpretasi, bukan pada pekerjaan mekanis.</li>
+                    <li>Meningkatkan kualitas pekerjaanmu dengan alat-alat yang akurat dan efisien.</li>
+                </ul>
+            </div>
+            
+            <div class="hearts">❤️💖❤️</div>
+            
+            <p>Aku ingin kamu tahu bahwa aku selalu siap membantumu. Jika ada tugas spesifik yang ingin kamu permudah, ceritakan saja padaku. Kita bisa diskusikan bersama bagaimana teknologi bisa membantu studimu. Aku senang bisa membantumu sukses dalam studi! 😊</p>
+        </div>
+    </div>
+
+    <script>
+        const text = "Aku ditugaskan oleh dewa untuk menjelaskan sesuatu yang penting kepadamu.";
+        const typedTextElement = document.getElementById('typed-text');
+        const continueBtn = document.getElementById('continue-btn');
+        const introContainer = document.getElementById('intro');
+        const mainContainer = document.getElementById('main');
+        let charIndex = 0;
+
+        function typeText() {
+            if (charIndex < text.length) {
+                typedTextElement.innerHTML += text.charAt(charIndex);
+                charIndex++;
+                setTimeout(typeText, 50);
+            } else {
+                continueBtn.style.display = 'inline-block';
+            }
+        }
+
+        continueBtn.addEventListener('click', function() {
+            introContainer.style.display = 'none';
+            mainContainer.style.display = 'flex';
+        });
+
+        window.onload = typeText;
+
+        // Tambahkan efek sparkle
+        function createSparkle() {
+            const sparkle = document.createElement('div');
+            sparkle.className = 'sparkle';
+            document.body.appendChild(sparkle);
+
+            const size = Math.random() * 10 + 5;
+            const duration = Math.random() * 1000 + 500;
+
+            sparkle.style.width = `${size}px`;
+            sparkle.style.height = `${size}px`;
+            sparkle.style.left = `${Math.random() * 100}vw`;
+            sparkle.style.top = `${Math.random() * 100}vh`;
+
+            sparkle.animate([
+                { opacity: 0, transform: 'scale(0)' },
+                { opacity: 1, transform: 'scale(1)' },
+                { opacity: 0, transform: 'scale(0)' }
+            ], {
+                duration: duration,
+                easing: 'ease-in-out'
+            }).onfinish = () => {
+                sparkle.remove();
+                createSparkle();
+            };
+        }
+
+        for (let i = 0; i < 20; i++) {
+            setTimeout(createSparkle, Math.random() * 1000);
+        }
+    </script>
+</body>
+</html>
