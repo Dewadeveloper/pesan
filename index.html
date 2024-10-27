@@ -5,93 +5,125 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pesan untuk Adel</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+
         body, html {
             height: 100%;
             margin: 0;
-            font-family: 'Arial', sans-serif;
-            background-color: #ffe6f2;
+            font-family: 'Quicksand', sans-serif;
+            background-color: #fff0f5;
             position: relative;
+            overflow-x: hidden;
+        }
+        .watermark {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.8em;
+            color: #ff1493;
+            white-space: nowrap;
+            pointer-events: none;
+            z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 10px 20px;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(255, 20, 147, 0.2);
+            font-weight: bold;
+            letter-spacing: 2px;
         }
         .intro-container, .main-container {
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100%;
+            min-height: 100%;
             position: relative;
             z-index: 1;
         }
         .intro-content, .main-content {
             text-align: center;
-            background-color: rgba(255, 255, 255, 0.9);
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 0 20px rgba(255, 105, 180, 0.3);
-            max-width: 80%;
+            background-color: white;
+            padding: 50px;
+            border-radius: 30px;
+            box-shadow: 0 10px 30px rgba(255, 105, 180, 0.3);
+            max-width: 800px;
+            margin: 80px 20px;
+            position: relative;
         }
         h1 {
-            color: #ff69b4;
-            font-size: 2.5em;
-            margin-bottom: 20px;
+            color: #ff1493;
+            font-size: 3.2em;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 0px #ffb6c1;
+        }
+        h2 {
+            color: #c71585;
+            font-size: 2.4em;
+            margin-top: 40px;
+            margin-bottom: 30px;
         }
         p {
             color: #333;
-            font-size: 1.2em;
+            font-size: 1.4em;
+            line-height: 1.8;
             margin-bottom: 30px;
         }
         .continue-btn {
             background-color: #ff69b4;
             color: white;
             border: none;
-            padding: 10px 20px;
-            font-size: 1.1em;
-            border-radius: 5px;
+            padding: 15px 30px;
+            font-size: 1.3em;
+            border-radius: 50px;
             cursor: pointer;
-            transition: background-color 0.3s;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 105, 180, 0.4);
             display: none;
         }
         .continue-btn:hover {
             background-color: #ff1493;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 105, 180, 0.6);
         }
         .main-container {
             display: none;
         }
         .section {
             background-color: #fff0f5;
-            border: 1px solid #ffb6c1;
-            border-radius: 10px;
-            padding: 20px;
-            margin-bottom: 20px;
+            border: 3px solid #ffb6c1;
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 40px;
             text-align: left;
+            position: relative;
         }
         .section h3 {
             color: #c71585;
             margin-top: 0;
+            font-size: 2em;
+            margin-bottom: 20px;
         }
-        .hearts {
-            text-align: center;
-            font-size: 24px;
-            color: #ff69b4;
-            margin: 20px 0;
+        ul {
+            padding-left: 25px;
         }
-        .watermark {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%) rotate(-45deg);
-            font-size: 8vw;
-            color: rgba(255, 105, 180, 0.1);
-            white-space: nowrap;
+        li {
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+        .decoration {
+            position: absolute;
+            font-size: 3em;
+            opacity: 0.1;
             pointer-events: none;
-            z-index: 0;
         }
+        .deco-1 { top: 10px; left: 10px; }
+        .deco-2 { bottom: 10px; right: 10px; }
         .sparkle {
             position: absolute;
             width: 10px;
             height: 10px;
             background-color: #ff69b4;
             border-radius: 50%;
-            opacity: 0;
-            pointer-events: none;
         }
     </style>
 </head>
@@ -102,53 +134,57 @@
             <h1>Halo, Adel! 👋</h1>
             <p id="typed-text"></p>
             <button id="continue-btn" class="continue-btn">Lanjutkan</button>
+            <div class="decoration deco-1">✨</div>
+            <div class="decoration deco-2">🌸</div>
         </div>
     </div>
 
     <div class="main-container" id="main">
         <div class="main-content">
-            <h1>🌸 Asisten Pintar untuk Mahasiswa Bahasa Indonesia 🌸</h1>
-            
-            <div class="hearts">❤️💖❤️</div>
+            <h1>Asisten Pintar untuk Mahasiswa Bahasa Indonesia</h1>
             
             <h2>Solusi Cerdas untuk Tugas-tugasmu</h2>
             
+            <p>Adel, aku tahu kuliah itu tidak mudah, apalagi jurusan Bahasa Indonesia yang penuh dengan analisis mendalam dan tugas-tugas yang menantang. Tapi jangan khawatir, aku di sini untuk membantumu sebisa mungkin! 😊</p>
+            
             <div class="section">
-                <h3>Hai, Aku Ingin Membantumu!</h3>
-                <p>Halo! Aku tahu kuliah Bahasa Indonesia itu penuh tantangan dan kadang membuatmu lelah. Sebagai teman yang bekerja di bidang IT, aku ingin membantumu menyelesaikan tugas-tugas kuliahmu dengan lebih mudah dan efisien. Aku bisa membuatkan software khusus untukmu yang akan mengotomatisasi beberapa pekerjaan yang biasanya kamu lakukan secara manual.</p>
+                <h3>Hai, Aku Ingin Membantumu! 🤗</h3>
+                <p>Sebagai teman yang bekerja di bidang IT, aku ingin menggunakan keahlianku untuk membuatkan software khusus untukmu. Software ini bisa mengotomatisasi beberapa pekerjaan yang biasanya kamu lakukan secara manual. Aku akan berusaha semampuku untuk membuatnya sesederhana dan seefektif mungkin untukmu.</p>
+                <div class="decoration deco-1">💻</div>
             </div>
             
             <div class="section">
-                <h3>Apa yang Bisa Kulakukan Untukmu?</h3>
-                <p>Meskipun aku tidak tahu persis semua jenis tugas yang kamu hadapi, aku bisa membuat beberapa software yang mungkin berguna untukmu, seperti:</p>
+                <h3>Apa yang Bisa Kulakukan Untukmu? 🎨</h3>
+                <p>Meskipun aku tidak sepenuhnya paham semua detail tugas Bahasa Indonesia, tapi aku bisa membuat beberapa software yang mungkin berguna untukmu, seperti:</p>
                 <ul>
-                    <li>Penganalisis teks otomatis untuk membantu mengidentifikasi struktur kalimat, gaya bahasa, atau unsur-unsur sastra dalam sebuah karya.</li>
-                    <li>Generator ringkasan otomatis untuk membantu meringkas artikel atau buku yang panjang.</li>
-                    <li>Alat pengecekan plagiarisme untuk memastikan keaslian tulisanmu.</li>
-                    <li>Pembuat kutipan dan daftar pustaka otomatis sesuai dengan gaya yang dibutuhkan (APA, MLA, dll).</li>
-                    <li>Pengubah format teks, misalnya dari aksara Latin ke aksara Jawa atau Sunda, dan sebaliknya.</li>
+                    <li>Penganalisis teks otomatis untuk membantu mengidentifikasi struktur kalimat, gaya bahasa, atau unsur-unsur sastra dalam sebuah karya. 📚</li>
+                    <li>Generator ringkasan otomatis untuk membantu meringkas artikel atau buku yang panjang. 📝</li>
+                    <li>Alat pengecekan plagiarisme sederhana untuk memastikan keaslian tulisanmu. 🔍</li>
+                    <li>Pembuat kutipan dan daftar pustaka otomatis sesuai dengan gaya yang dibutuhkan (APA, MLA, dll). 📖</li>
+                    <li>Pengubah format teks, misalnya dari aksara Latin ke aksara Jawa atau Sunda, dan sebaliknya. 🔄</li>
                 </ul>
+                <div class="decoration deco-2">🌟</div>
             </div>
             
             <div class="section">
-                <h3>Bagaimana Cara Kerjanya?</h3>
-                <p>Software-software ini akan kubuat khusus untukmu menggunakan bahasa pemrograman Python. Nanti, aku akan mengubahnya menjadi file .exe yang bisa langsung kamu jalankan di laptopmu tanpa perlu menginstal apa-apa. Kamu tinggal klik dua kali, masukkan data yang diperlukan, dan software akan bekerja untukmu!</p>
+                <h3>Bagaimana Cara Kerjanya? 🛠️</h3>
+                <p>Aku akan berusaha semampuku untuk membuat software-software ini menggunakan bahasa pemrograman Python. Nanti, aku akan mengubahnya menjadi file .exe yang bisa langsung kamu jalankan di laptopmu tanpa perlu menginstal apa-apa. Kamu tinggal klik dua kali, masukkan data yang diperlukan, dan software akan bekerja untukmu!</p>
+                <div class="decoration deco-1">🔧</div>
             </div>
             
             <div class="section">
-                <h3>Mengapa Ini Akan Membantumu?</h3>
-                <p>Dengan software-software ini, kamu bisa:</p>
+                <h3>Mengapa Ini Akan Membantumu? 🚀</h3>
+                <p>Dengan software-software ini, semoga kamu bisa:</p>
                 <ul>
-                    <li>Menghemat waktu dalam mengerjakan tugas-tugas yang repetitif.</li>
-                    <li>Mengurangi kesalahan yang mungkin terjadi saat bekerja manual.</li>
-                    <li>Fokus pada aspek-aspek penting dari tugasmu, seperti analisis dan interpretasi, bukan pada pekerjaan mekanis.</li>
-                    <li>Meningkatkan kualitas pekerjaanmu dengan alat-alat yang akurat dan efisien.</li>
+                    <li>Menghemat waktu dalam mengerjakan tugas-tugas yang repetitif. ⏱️</li>
+                    <li>Mengurangi kesalahan yang mungkin terjadi saat bekerja manual. ✅</li>
+                    <li>Fokus pada aspek-aspek penting dari tugasmu, seperti analisis dan interpretasi, bukan pada pekerjaan mekanis. 🧠</li>
+                    <li>Meningkatkan kualitas pekerjaanmu dengan alat-alat yang akurat dan efisien. 📈</li>
                 </ul>
+                <div class="decoration deco-2">🎉</div>
             </div>
             
-            <div class="hearts">❤️💖❤️</div>
-            
-            <p>Aku ingin kamu tahu bahwa aku selalu siap membantumu. Jika ada tugas spesifik yang ingin kamu permudah, ceritakan saja padaku. Kita bisa diskusikan bersama bagaimana teknologi bisa membantu studimu. Aku senang bisa membantumu sukses dalam studi! 😊</p>
+            <p>Adel, aku ingin kamu tahu bahwa aku akan berusaha semampuku untuk membantumu. Jika ada tugas spesifik yang ingin kamu permudah, ceritakan saja padaku. Kita bisa diskusikan bersama bagaimana teknologi bisa membantu studimu. Aku senang bisa membantumu sukses dalam studi! 🌈✨</p>
         </div>
     </div>
 
@@ -183,28 +219,26 @@
             sparkle.className = 'sparkle';
             document.body.appendChild(sparkle);
 
-            const size = Math.random() * 10 + 5;
-            const duration = Math.random() * 1000 + 500;
-
+            const size = Math.random() * 15 + 5;
             sparkle.style.width = `${size}px`;
             sparkle.style.height = `${size}px`;
             sparkle.style.left = `${Math.random() * 100}vw`;
             sparkle.style.top = `${Math.random() * 100}vh`;
 
             sparkle.animate([
-                { opacity: 0, transform: 'scale(0)' },
-                { opacity: 1, transform: 'scale(1)' },
-                { opacity: 0, transform: 'scale(0)' }
+                { opacity: 0, transform: 'scale(0) rotate(0deg)' },
+                { opacity: 1, transform: 'scale(1) rotate(180deg)' },
+                { opacity: 0, transform: 'scale(0) rotate(360deg)' }
             ], {
-                duration: duration,
-                easing: 'ease-in-out'
+                duration: 1000 + Math.random() * 1000,
+                easing: 'cubic-bezier(0.4, 0.0, 0.2, 1)',
             }).onfinish = () => {
                 sparkle.remove();
                 createSparkle();
             };
         }
 
-        for (let i = 0; i < 20; i++) {
+        for (let i = 0; i < 30; i++) {
             setTimeout(createSparkle, Math.random() * 1000);
         }
     </script>
